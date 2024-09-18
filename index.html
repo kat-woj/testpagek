@@ -5,14 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <title>My CMP v2 Testpage</title>    
-
-<!-- Usercentrics CMP <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WFhrOPG9xmPpcj" async></script> -->
     
- <!-- Cookiebot
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e04428a3-46bd-4aa5-a478-c84ac52b5647" data-blockingmode="auto" type="text/javascript"></script>
-End Cookiebot --> 
+<script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+</script>
 
-    <!-- Google Analytics -->
+    <!-- Google Analytics
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -22,10 +34,10 @@ End Cookiebot -->
     ga('create', 'UA-183442640-1', 'auto');
     ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics -->
+  End Google Analytics -->
 
     <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) {
+    <script data-cookieconsent="ignore">(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -34,6 +46,13 @@ End Cookiebot -->
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-W9C2FV2M');</script>
     <!-- End Google Tag Manager -->
+
+    <!-- Usercentrics CMP <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WFhrOPG9xmPpcj" async></script> -->
+    
+ <!-- Cookiebot  -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e04428a3-46bd-4aa5-a478-c84ac52b5647" data-blockingmode="auto" type="text/javascript"></script>
+<!-- End Cookiebot --> 
+
 </head>
 
 <body>
