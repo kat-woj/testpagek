@@ -26,9 +26,9 @@
 
     <!-- Usercentrics CMP <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WFhrOPG9xmPpcj" async></script> -->
     
- <!-- Cookiebot
+ <!-- Cookiebot --> 
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e04428a3-46bd-4aa5-a478-c84ac52b5647" data-blockingmode="auto" type="text/javascript"></script>
-End Cookiebot --> 
+ <!-- End Cookiebot --> 
 
     <!-- Google Analytics
     <script>
@@ -43,7 +43,7 @@ End Cookiebot -->
   End Google Analytics -->
 
     <!-- Google Tag Manager -->
-    <script data-cookieconsent="ignore">(function (w, d, s, l, i) {
+    <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
                     new Date().getTime(), event: 'gtm.js'
@@ -52,8 +52,23 @@ End Cookiebot -->
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-W9C2FV2M');</script>
     <!-- End Google Tag Manager -->
-
-
+<script> myFunction(info) {
+  var x = info;
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}</script>
+<style>
+    .square:hover {
+        background-color:light-blue
+    }
+    
+    #info {
+        display: none;
+    }
+</style>
 </head>
 
 <body>
@@ -64,6 +79,11 @@ End Cookiebot -->
 
     <h1>Usercentrics CMP V2 Test Page</h1>
     <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">
+   <div class="square">
+       <button>Click me to interact</button>
+       <p id="info">This text will appear on click.</p>
+   </div>
+   
 </body>
 
 </html>
