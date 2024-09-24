@@ -52,21 +52,20 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-W9C2FV2M');</script>
     <!-- End Google Tag Manager -->
-<script> myFunction(info) {
-  var x = info;
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+    
+<script data-cookieconsent="ignore"> function myFunction() {
+ document.getElementById("demo").innerHTML = "This text will appear on click";
 }</script>
+    
 <style>
-    .square:hover {
-        background-color:light-blue
+    .square {
+        padding: 15px;
+        margin: 20px;
+        border: blue;
     }
     
-    #info {
-        display: none;
+    .square:hover {
+        background-color: #6BB7FF;
     }
 </style>
 </head>
@@ -80,10 +79,10 @@
     <h1>Usercentrics CMP V2 Test Page</h1>
     <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">
    <div class="square">
-       <button>Click me to interact</button>
-       <p id="info">This text will appear on click.</p>
+       <button onclick="myFunction()">Click me to interact</button>
+       <p id="demo"></p>
    </div>
-   
+    
 </body>
 
 </html>
