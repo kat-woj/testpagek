@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>EN My CMP v2 Testpage</title>    
+    
+<script data-cookieconsent="ignore">
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag("consent", "default", {
+        ad_personalization: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        analytics_storage: "denied",
+        functionality_storage: "denied",
+        personalization_storage: "denied",
+        security_storage: "granted",
+        wait_for_update: 500,
+    });
+    gtag("set", "ads_data_redaction", true);
+</script>
+
+    <!-- Usercentrics CMP <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WFhrOPG9xmPpcj" async></script> -->
+    
+ <!-- Cookiebot --> 
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e04428a3-46bd-4aa5-a478-c84ac52b5647" data-blockingmode="auto" type="text/javascript"></script>
+ <!-- End Cookiebot --> 
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-183442640-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!--  End Google Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W9C2FV2M');</script>
+    <!-- End Google Tag Manager -->
+    
+<script data-cookieconsent="ignore"> function myFunction() {
+ document.getElementById("demo").innerHTML = "This text will appear on click";
+}</script>
+    
+<style>
+    .square {
+        padding: 15px;
+        margin: 20px;
+        border: blue;
+    }
+    
+    .square:hover {
+        background-color: #6BB7FF;
+    }
+</style>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9C2FV2M" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <h1>ENGLISH Usercentrics CMP V2 Test Page</h1>
+    <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">
+   <div class="square">
+       <button onclick="myFunction()">Click me to interact</button>
+       <p id="demo"></p>
+   </div>
+    
+</body>
+
+</html>
