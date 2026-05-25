@@ -1,75 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
     
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <title>My CMP v2 Testpage</title>    
-    
-<!-- script data-cookieconsent="ignore" -->
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag("consent", "default", {
-        ad_personalization: "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        analytics_storage: "denied",
-        functionality_storage: "denied",
-        personalization_storage: "denied",
-        security_storage: "granted",
-        wait_for_update: 500,
-    });
-    gtag("set", "ads_data_redaction", true);
-<!-- /script -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+      <script> function showInfo(info) {
+  var x = info;
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
 
-    <!-- Usercentrics CMP <script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="WFhrOPG9xmPpcj" async></script> -->
-    
- <!-- Cookiebot --> 
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e04428a3-46bd-4aa5-a478-c84ac52b5647" data-blockingmode="auto" type="text/javascript"></script>
- <!-- End Cookiebot --> 
+function displayInfo(info) {
+  var y = info;
+  if (y.style.opacity === 1) {
+    y.style.opacity = 0;
+  } else {
+    y.style.opacity = 1;
+  
+  }
+}
 
-    <!-- Google Analytics -->
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
-    ga('create', 'UA-183442640-1', 'auto');
-    ga('send', 'pageview');
-    </script>
-    <!--  End Google Analytics -->
+// Set the date we're counting down to
+var countDownDate = new Date("Jun 10, 2025 00:00:00").getTime();
 
-    
-<script data-cookieconsent="ignore"> function myFunction() {
- document.getElementById("demo").innerHTML = "This text will appear on click";
-}</script>
-    
-<style>
-    .square {
-        padding: 15px;
-        margin: 20px;
-        border: blue;
-    }
-    
-    .square:hover {
-        background-color: #6BB7FF;
-    }
-</style>
-</head>
+// Update the count down every 1 second
+var x = setInterval(function() {
 
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("clock").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("clock").innerHTML = "EXPIRED";
+  }
+}, 1000);</script>
+
+      <style>
+          /* color palette
+:root {
+  --color-1: #00001e;
+  --color-2: #032539;
+  --color-3: #372d8d;
+  --color-4: #8f7fb5;
+}
+
+body {
+  background: linear-gradient(90deg, var(--color-1) 0%, var(--color-1) 25%, var(--color-2) 25%, var(--color-2) 50%, var(--color-3) 50%, var(--color-3) 75%, var(--color-4) 75%, var(--color-4) 100%);
+}
+end of color palette */
+
+.tomorrow-thin {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.tomorrow-extralight {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.tomorrow-light {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.tomorrow-regular {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tomorrow-medium {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.tomorrow-semibold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.tomorrow-bold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.tomorrow-extrabold {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.tomorrow-black {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.tomorrow-thin-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.tomorrow-extralight-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.tomorrow-light-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.tomorrow-regular-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.tomorrow-medium-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.tomorrow-semibold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.tomorrow-bold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.tomorrow-extrabold-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.tomorrow-black-italic {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+body {
+  background-color: #000000;
+  color: #cfcfda;
+  padding: 70px;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.header-title {
+  text-align: center;
+}
+h1{
+  font-size: 77px;
+}
+h2{
+  font-size: 60px;
+}
+h3, h4 {
+  text-align: center;
+}
+p {
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  min-width: 1200px;
+}
+.profile {
+  background-color: #032539;
+  display: block;
+  text-align: justify;
+  width: 350px;
+  height: auto;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.profile:hover {
+  background-color: #8f7fb5;
+  cursor: pointer;
+}
+.profilepic {
+  width: 250px;
+  border-radius: 20px;
+  padding: 10px
+}
+
+.info {
+  display: none;
+  margin-bottom: 40px;
+  height: 120px;
+  opacity: 0;
+  animation-name: example;
+  animation-duration: 0.7s;
+  font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* The animation code */
+@keyframes example {
+  from {display: block; opacity: 0;}
+  to {display: block; opacity: 1;}
+}
+
+/*/////////////////////////////////////////////// MIN YOONGI SECTION ///////////////////////////////////////////////*/
+
+.min-yoongi {
+  background-color: #032539;
+  margin: auto;
+  height: auto;
+  width: 700px;
+  padding: 60px;
+  text-align: justify;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+
+.min-yoongi:hover {
+  background-color: #8f7fb5;
+}
+
+.mincolumn {
+  float: left;
+  width: 50%;
+}
+
+#yoongipic {
+  width: 250px;
+  border-radius: 20px;
+}
+#mintext {
+  margin-top: 30px;
+}
+.minrow:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#myg1 {
+  height: auto;
+  margin-top: 25px;
+}
+#myg2 {
+  height: auto;
+  margin-top: 25px;
+}
+
+#yoonginame {
+  text-align: left;
+}
+#yoongititle {
+  text-align: left;
+}
+
+#countdown {
+  text-align:center;
+  padding: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: block;
+  text-align: justify;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border-radius: 25px;
+  background-color: #8f7fb5;
+}
+#clock {
+  text-align: center;
+  font-size: 70px;
+}
+
+#whoscoming {
+  font-size: 30px;
+}</style>
+  
+  </head>
 <body>
+    <div class="header-title">
+      <h1>When are they coming back?</h1>
+      <h2>Bangtan Sonyeondan</h2>
+    </div>
+<div id="countdown" class="countdown">
+    <h3>
+    Days until next discharge:
+    </h3>
+<p id="clock"></p>
+<h3>
+Next members coming back: <p id="whoscoming">
+Kim Namjoon<br>
+Kim Taehyung
+</p>
+</h3>
+    </div>
+    <div class="row">
+      <div class="column">
+        <div
+          id="kim-seokjin"
+          class="profile"
+          onclick="showInfo(ksj); displayInfo(ksj)"
+        >
+          <img
+            id="seokjinpic"
+            class="profilepic"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBHO3tz3Y96BQKOFAkxCTOZuXW3ZaTf6iNUH-6fa3197cNj8cG"
+          />
+          <h3>Kim Seokjin</h3>
+          <h4>Service completed</h4>
+          <p id="ksj" class="info">
+            Age: 32 years old<br /><br />
+            Enlistment date: 2022.12.13<br />
+            Discharge date: 2024.06.12<br /><br />
+            During his career in the military Seokjin has been promoted to
+            Corporal and then Sergeant.
+          </p>
+        </div>
+        <div
+          id="park-jimin"
+          class="profile"
+          onclick="showInfo(pjm); displayInfo(pjm)"
+        >
+          <img
+            id="jiminpic"
+            class="profilepic"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSny4PnXoYsvn0pbc8QDlr3TEcculK75Px4mbWh8chRwRRcOv4N"
+          />
+          <h3>Park Jimin</h3>
+          <h4>Rank: Sergeant</h4>
+          <p id="pjm" class="info">
+            Age: 29 years<br /><br />
+            Enlistment date: 2023.12.12<br />
+            Discharge date: 2025.06.11<br /><br />
+            Jimin is currently enlisted in the military and has received the
+            honorific title of Special Warrior in the fifth rank.
+          </p>
+        </div>
+      </div>
 
+      <div class="column">
+        <div
+          id="jung-hoseok"
+          class="profile"
+          onclick="showInfo(jhs); displayInfo(jhs)"
+        >
+          <img
+            id="hoseokpic"
+            class="profilepic"
+            src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcThs9Fxr8xY4-vZ248G3bOZ_EiobfDRDDMV8fS8EQPCJO4hvdfz"
+          />
+          <h3>Jung Hoseok</h3>
+          <h4>Service completed</h4>
+          <p id="jhs" class="info">
+            Age: 31 years old<br /><br />
+            Enlistment date: 2023.04.18<br />
+            Discharge date: 2024.10.17<br /><br />
+            During his military service Hoseok has been promoted to traning new
+            recruits and obtained the rank of Sergeant.
+          </p>
+        </div>
+        <div
+          id="kim-taehyung"
+          class="profile"
+          onclick="showInfo(kth); displayInfo(kth)"
+        >
+          <img
+            id="taehyungpic"
+            class="profilepic"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRpAGZSvCekdFi6ACRSh82HHWgYekimrfpxh-8TG-faEIKKn2a4"
+          />
+          <h3>Kim Taehyung</h3>
+          <h4>Rank: Sergeant</h4>
+          <p id="kth" class="info">
+            Age: 29 years<br /><br />
+            Enlistment date: 2023.12.12<br />
+            Discharge date: 2025.06.11<br /><br />
+            Taehyung is serving in the Special Task Force. Currently he is a
+            specialised member of the Military Police Corps.
+          </p>
+        </div>
+      </div>
 
-    <h1>Usercentrics CMP V2 Test Page</h1>
-    <img src="https://usercentrics.com/wp-content/uploads/2020/04/190208-UCS-Logo-800px.png" alt="uc-logo">
-   <div class="square">
-       <button onclick="myFunction()">Click me to interact</button>
-       <p id="demo"></p>
-   </div>
+      <div class="column">
+        <div
+          id="kim-namjoon"
+          class="profile"
+          onclick="showInfo(knj); displayInfo(knj)"
+        >
+          <img
+            id="namjoonpic"
+            class="profilepic"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbVtD6jDUGL6iMw5rsggcsHLLSXMYzYvNk_8Y9A27wkFd3ILI5"
+          />
+          <h3>Kim Namjoon</h3>
+          <h4>Rank: Corporal</h4>
+          <p id="knj" class="info">
+            Age: 30 years old<br /><br />
+            Enlistment date: 2023.12.11<br />
+            Discharge date: 2025.06.10<br /><br />
+            Namjoon serves in the Special Task Force of the Capital Defence
+            Command. He is counting days until his release date.
+          </p>
+        </div>
+        <div
+          id="jeon-jungkook"
+          class="profile"
+          onclick="showInfo(jjk); displayInfo(jjk)"
+        >
+          <img
+            id="jungkookpic"
+            class="profilepic"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVV1YjdvYZkK2A63pPCku8Sx6D82rVrEdMAHBxdSbU0Fhx2jzx"
+          />
+          <h3>Jeon Jungkook</h3>
+          <h4>Rank: Sergeant</h4>
+          <p id="jjk" class="info">
+            Age: 27 years old<br /><br />
+            Enlistment date: 2023.12.12<br />
+            Discharge date: 2025.06.11<br /><br />
+            Jungkook has enlisted as an active duty soldier. So far he has
+            obtained the rank of Corporal and then Sergeant.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="min-yoongi" onclick="showInfo(myg1); displayInfo(myg1); showInfo(myg2); displayInfo(myg2);">
+      <div class="minrow">
+        <div id="minpic" class="mincolumn">
+          <img
+            id="yoongipic"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcarRs85fsiSefZodfP9YAZBJFEjhg3n4GI_fPbMDgf5D2Msue"
+          />
+        </div>
+        <div id="mintext" class="mincolumn">
+          <h3 id="yoonginame">Min Yoongi</h3>
+          <h4 id="yoongititle">Civil Service</h4>
+        <p id="myg1" class="info">
+            Age: 31 years old<br /><br />
+      Enlistment date: 2023.09.22<br />
+      Discharge date: 2025.06.21<br /><br /></p>
+        </div>
+      </div>
+       <p id="myg2" class="info">Yoongi has been given an exemption from military service due to previous
+      shoulder surgery. He has been enlisted for initial training and then
+      enrolled in civil service. This option has a duration of two years.
+      </p>
+    </div>
     
-</body>
-
+    
+  </body>
 </html>
